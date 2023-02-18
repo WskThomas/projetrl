@@ -59,6 +59,7 @@ class hexGame(Game):
         print("")
         print("Rules recap:")
         print("The player 1 (W pawn) must connect the letters: the other player must connect the numbers.")
+        print('Example of a move: B 2')
         print("")
         column_names = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         board = board_[0].astype(np.int)
