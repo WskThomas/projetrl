@@ -43,7 +43,7 @@ def main(args):
         from pentago.PentaGoPlayers import HumanPentaGoPlayer
         from pentago.pytorch.NNet import NNetWrapper as NNet
 
-        path = './pretrained_models/hex/pytorch/'
+        path = './pretrained_models/pentago/pytorch/'
 
         g = Game(6)
         hp = HumanPentaGoPlayer(g).play
@@ -83,7 +83,7 @@ if __name__ == '__main__':
         description='Generating temperature models')
 
     parser.add_argument('--game_name', "--string",
-                        default="hex", type=str)
+                        default="pentago", type=str)
     parser.add_argument('--human_vs_cpu', default=True, action='store_true')
     parser.add_argument('--cpu_vs_cpu', dest='human_vs_cpu', action='store_false')
     main(parser.parse_args())
