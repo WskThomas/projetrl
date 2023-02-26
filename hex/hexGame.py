@@ -48,9 +48,9 @@ class hexGame(Game):
 
     def stringRepresentation(self, board):
         if board[1] == 1:
-            return str(board[0].astype(np.int))
+            return str(board[0].astype(np.int32))
         else:
-            return str(-board[0].T.astype(np.int))
+            return str(-board[0].T.astype(np.int32))
         # return str(board[0].astype(np.int))+str(board[1])
 
     @staticmethod
@@ -62,7 +62,7 @@ class hexGame(Game):
         print('Example of a move: B 2')
         print("")
         column_names = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        board = board_[0].astype(np.int)
+        board = board_[0].astype(np.int32)
         if board_[1] == -1:
             board = board.T
         rows = len(board)
